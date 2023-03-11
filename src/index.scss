@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animate-customSpin {
+  animation: blackHole 10s infinite linear;
+  -webkit-animation: blackHole 10s infinite linear;
+
+  @keyframes blackHole {
+    0% {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+    }
+  }
+}
+
+.btn {
+  @apply rounded-lg rounded bg-teal-700 px-2 py-1 m-2 text-white;
+}
+
+
+@layer base {}
+
+::-webkit-scrollbar {
+  @apply w-[2px];
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white;
+}
+
+.navListItem {
+  @apply duration-200 bg-slate-800 bg-opacity-50 rounded-md shadow-inner shadow-cyan-800 hover:shadow-cyan-600 hover:text-white px-2 cursor-pointer;
+}
+
+
+h1 {
+  font-size: calc(20px + (200 - 20) * ((100vw - 360px) / (9999 - 360)));
+  font-weight: 700;
+}
+
+.paddingContainer {
+  padding-left: calc(20px + (200 - 20) * ((100vw - 360px) / (9999 - 360)));
+  padding-right: calc(20px + (200 - 20) * ((100vw - 360px) / (9999 - 360)));
+}
+
+.paddingTopBottom {
+  padding-top: calc(8px + (20 - 8) * ((100vw - 360px) / (9999 - 360)));
+  padding-bottom: calc(8px + (20 - 8) * ((100vw - 360px) / (9999 - 360)));
+}
+
+.logo-container {
+  width: calc(25px + (200 - 25) * ((100vw - 360px) / (9999 - 360)));
+  height: calc(25px + (200 - 25) * ((100vw - 360px) / (9999 - 360)));
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
+  background-image: url(../public/assets/EarthLogo2.svg);
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-color: #155e75;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  animation: earth 120s linear infinite;
+  -webkit-animation: earth 120s linear infinite;
+  box-shadow: inset calc(15px + (100 - 15) * ((100vw - 360px) / (9999 - 360))) 0 15px rgba($color: #000000, $alpha: 0.9);
+  rotate: 20deg;
+}
+
+@keyframes earth {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: calc(300px + (1600 - 300) * ((100vw - 360px) / (9999 - 360))) 0;
+  }
+}
+
+.hand {
+  position: absolute;
+  top: 84%;
+  left: 50%;
+  width: 130%;
+  height: calc(30px + (200 - 30) * ((100vw - 360px) / (9999 - 360)));
+  background-image: url(../public/assets/oliv.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translate(-50%, -60%);
+  -webkit-transform: translate(-50%, -60%);
+  -moz-transform: translate(-50%, -60%);
+  -ms-transform: translate(-50%, -60%);
+  -o-transform: translate(-50%, -60%);
+}
+
+nav {
+  background-color: #000000;
+  background-image: url(../public/assets/schema.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  ul {
+    li {
+      font-size: calc(12px + (70 - 12) * ((100vw - 360px) / (9999 - 360)));
+    }
+
+    .d1 {
+      transition-delay: calc(0.1s * 1);
+    }
+
+    .d2 {
+      transition-delay: calc(0.1s * 2);
+    }
+
+    .d3 {
+      transition-delay: calc(0.1s * 3);
+    }
+
+    .d4 {
+      transition-delay: calc(0.1s * 4);
+    }
+  }
+}
+  @media (min-width: 768px) {
+    nav {
+      background-image:none;
+    }
+  }
+
+.paddingTopBottomSection {
+  padding-top: calc(50px + (100 - 50) * ((100vw - 360px) / (9999 - 360)));
+  padding-bottom: calc(50px + (100 - 50) * ((100vw - 360px) / (9999 - 360)));
+}
